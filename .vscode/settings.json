@@ -3,9 +3,6 @@
   "editor.formatOnSave": false,
 
   "editor.formatOnPaste": false,
-  "[typescript]": {
-    "editor.formatOnSave": true
-  },
   "[html]": {
     "editor.formatOnSave": false
   },

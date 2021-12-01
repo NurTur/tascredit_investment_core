@@ -14,7 +14,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `[name].[hash].css`,
+      filename: `[name].[contenthash].css`,
     }),
     new Dotenv({
       path: path.resolve(__dirname, "./addons/.env.development"),
@@ -23,7 +23,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "[name].[hash].js",
+    filename: "[name].[contenthash].js",
   },
 
   devtool: "eval-source-map",

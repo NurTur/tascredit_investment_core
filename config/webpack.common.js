@@ -10,15 +10,15 @@ const PUB_DIR = path.resolve(__dirname, "../public");
 const ESLintPlugin = new _ESLintPlugin({
   overrideConfigFile: path.resolve(__dirname, "../.eslintrc.json"),
   context: path.resolve(__dirname, "../src/"),
-  files: "**/*.tsx",
+  files: "**/*.jsx",
 });
 
 module.exports = {
-  entry: APP_DIR + "/index.tsx",
+  entry: APP_DIR + "/index.jsx",
   mode: "development",
   module: {
     rules: [
-      loaders.TSLoader,
+      loaders.JSLoader,
       loaders.CSSLoader,
       loaders.SVGLoader,
       loaders.FileLoader,
@@ -36,7 +36,7 @@ module.exports = {
       "public": path.resolve(__dirname, "../public"),
       
     },
-    extensions: [".tsx", ".ts", ".js", ".json", ".css"],
+    extensions: [".jsx", ".js", ".json", ".css"],
   },
   plugins: [
     ESLintPlugin,

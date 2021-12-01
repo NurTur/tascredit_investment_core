@@ -7,12 +7,6 @@ const JSLoader = {
   use: ["babel-loader"],
 };
 
-const TSLoader = {
-  test: /\.(ts|tsx)$/,
-  use: "ts-loader",
-  exclude: /node_modules/,
-};
-
 const SCSSLoader = {
   test: /\.(scss)$/,
   use: ["style-loader", "css-loader", "sass-loader"],
@@ -69,7 +63,6 @@ const StyleLoader = {
 };
 
 module.exports = {
-  TSLoader: TSLoader,
   JSLoader: JSLoader,
   SVGLoader: SVGLoader,
   CSSLoader: CSSLoader,
