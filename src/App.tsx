@@ -1,34 +1,17 @@
-import React from 'react';
-import { Navigate, useRoutes } from 'react-router-dom';
-import AccountDetailView from './account/AccountDetailView';
-import AccountLayout from './account/AccountLayout';
+import React, { ReactElement } from 'react';
+import { Route, Routes } from 'react-router';
+
 import MainLayout from './main/MainLayout';
+import { Page1, Page2, Page3 } from './pages';
 
-const App: React.FC = (): JSX.Element => {
-  const mainRoutes = {
-    path: '/',
-    element: <MainLayout />,
-    children: [
-      { path: '*', element: <Navigate to="/404" /> },
-      { path: '/', element: <div>MainPage</div> },
-      { path: '404', element: <div>404444</div> },
-      { path: 'account', element: <Navigate to="/account/list" /> },
-    ],
-  };
+const RootRoutes = (): ReactElement => (
+  <Routes>
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<Page1 />} />
+      <Route path="/:loanId" element={<Page2 />} />
+    </Route>
+    <Route path="/login" element={<Page3 />} />
+  </Routes>
+);
 
-  const accountRoutes = {
-    path: 'account',
-    element: <AccountLayout />,
-    children: [
-      { path: '*', element: <Navigate to="/404" /> },
-      { path: ':id', element: <AccountDetailView /> },
-      { path: 'add', element: <div>add</div> },
-    ],
-  };
-
-  const routing = useRoutes([mainRoutes, accountRoutes]);
-
-  return <>{routing}</>;
-};
-
-export default App;
+export default RootRoutes;
