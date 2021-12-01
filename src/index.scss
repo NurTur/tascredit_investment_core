@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "FF Good Pro Light";
+  src: url("../public/fonts/FFGoodPro-Light.eot");
+  src: local("FF Good Pro Light"), local("FFGoodPro-Light"),
+    url("../public/fonts/FFGoodPro-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/FFGoodPro-Light.woff2") format("woff2"),
+    url("../public/fonts/FFGoodPro-Light.woff") format("woff"),
+    url("../public/fonts/FFGoodPro-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FF Good Pro Regular";
+  src: url("../public/fonts/FFGoodPro-Regular.eot");
+  src: local("FF Good Pro"), local("FFGoodPro-Regular"),
+    url("../public/fonts/FFGoodPro-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/fonts/FFGoodPro-Regular.woff2") format("woff2"),
+    url("../public/fonts/FFGoodPro-Regular.woff") format("woff"),
+    url("../public/fonts/FFGoodPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FF Good Pro Bold";
+  src: url("../public/fonts/FFGoodPro-Bold.eot");
+  src: local("FF Good Pro Bold"), local("FFGoodPro-Bold"),
+    url("../public/fonts/FFGoodPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/FFGoodPro-Bold.woff2") format("woff2"),
+    url("../public/fonts/FFGoodPro-Bold.woff") format("woff"),
+    url("../public/fonts/FFGoodPro-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FF Good Pro Ultra";
+  src: url("../public/fonts/FFGoodPro-Ultra.eot");
+  src: local("FF Good Pro Ultra"), local("FFGoodPro-Ultra"),
+    url("../public/fonts/FFGoodPro-Ultra.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/FFGoodPro-Ultra.woff2") format("woff2"),
+    url("../public/fonts/FFGoodPro-Ultra.woff") format("woff"),
+    url("../public/fonts/FFGoodPro-Ultra.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FF Good Pro Medium";
+  src: url("../public/fonts/FFGoodPro-Medium.eot");
+  src: local("FF Good Pro Medium"), local("FFGoodPro-Medium"),
+    url("../public/fonts/FFGoodPro-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/FFGoodPro-Medium.woff2") format("woff2"),
+    url("../public/fonts/FFGoodPro-Medium.woff") format("woff"),
+    url("../public/fonts/FFGoodPro-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "FF Good Pro Ultra";
+  color:red;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  background: #fff; 
+}
