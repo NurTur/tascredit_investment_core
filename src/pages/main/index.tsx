@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 
-function Page2(): ReactElement {
+function Page3(): ReactElement {
   return (
     <div>
-      <h1>Page 2</h1>
+      <h1>Page 3</h1>
     </div>
   );
 }
 
-export default Page2;
+export default Page3;
