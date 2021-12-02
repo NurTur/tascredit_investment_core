@@ -14,7 +14,7 @@ const ESLintPlugin = new _ESLintPlugin({
 });
 
 module.exports = {
-  entry: APP_DIR + "/index.jsx",
+  entry: APP_DIR + "/index.js",
   mode: "development",
   module: {
     rules: [
@@ -43,7 +43,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "INVESTMENTCore",
-      template: path.resolve(__dirname, "../src/index.html"),
+      template: path.resolve(__dirname, "../public/index.html"),
     }),
   ],
 };

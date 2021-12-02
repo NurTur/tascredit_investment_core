@@ -47,6 +47,12 @@ module.exports = {
     }),
   ],
 
+  externals: {
+    config: JSON.stringify({
+      apiUrl: apiUrl.API_URL_PROD
+    }),
+  },
+
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "[name].[contenthash].js",

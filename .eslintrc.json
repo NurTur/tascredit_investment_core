@@ -22,6 +22,8 @@
   },
   "plugins": ["prettier", "react", "react-hooks"],
   "rules": {
+      "func-names":"off",
+      "react/display-name":"off", 
       "import/no-unresolved":"off",
       "react/jsx-filename-extension": 0,
       "no-param-reassign": 0,

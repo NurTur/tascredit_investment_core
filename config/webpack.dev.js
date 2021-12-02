@@ -26,5 +26,11 @@ module.exports = {
     filename: "[name].[contenthash].js",
   },
 
+  externals: {
+    config: JSON.stringify({
+      apiUrl: apiUrl.API_URL_DEV
+    }),
+  },
+
   devtool: "eval-source-map",
 };
