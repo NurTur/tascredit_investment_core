@@ -90,6 +90,10 @@ const MainLayout = () => {
             </AppBar>
 
             <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
+
+            <Main theme={theme} open={leftDrawerOpened}>
+                <Outlet />
+            </Main>
         </Box>
     );
 };
