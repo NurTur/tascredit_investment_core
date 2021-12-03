@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
-import { Header } from '@/containers';
+import { Header, Sidebar } from '@/containers';
 // import Sidebar from './Sidebar';
 import { drawerWidth } from '@/store/constant';
 import { SET_MENU } from '@/store/actions';
@@ -88,6 +88,8 @@ const MainLayout = () => {
                     <Header handleLeftDrawerToggle={handleLeftDrawerToggle} />
                 </Toolbar>
             </AppBar>
+
+            <Sidebar drawerOpen={leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
         </Box>
     );
 };
