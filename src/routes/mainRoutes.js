@@ -1,12 +1,12 @@
 import React, { lazy } from 'react';
-// import MainLayout from 'layout/MainLayout';
+import { MainLayout } from '@/containers';
 import { Loadable } from '@/components';
 
 const DefaultMain = Loadable(lazy(() => import('@/views/main')));
 
 const MainRoutes = {
     path: '/',
-    // element: <MainLayout />,
+    element: <MainLayout />,
     children: [
         {
             path: '/',

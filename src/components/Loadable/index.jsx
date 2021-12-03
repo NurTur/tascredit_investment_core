@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import Loader from '../Loader';
+import Loader from '../loader';
 
 function Loadable(Component) {
     return function (props) {
