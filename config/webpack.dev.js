@@ -2,6 +2,7 @@ const path = require("path");
 const loader = require("./addons/loaders");
 const Dotenv = require("dotenv-webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const apiUrl = require("./apiUrl.js");
 
 module.exports = {
   mode: "development",

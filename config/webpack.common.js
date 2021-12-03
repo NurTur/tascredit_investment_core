@@ -13,6 +13,8 @@ const ESLintPlugin = new _ESLintPlugin({
   files: "**/*.jsx",
 });
 
+const apiUrl = require("./apiUrl.js");
+
 module.exports = {
   entry: APP_DIR + "/index.js",
   mode: "development",
@@ -25,11 +27,7 @@ module.exports = {
       loaders.SCSSLoader,
     ],
   },
-  devServer: {
-    historyApiFallback: true,
-    compress: true,
-    port: 7070,
-  },
+  
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "../src"),
@@ -38,6 +36,15 @@ module.exports = {
     },
     extensions: [".jsx", ".js", ".json", ".css"],
   },
+  devServer: {
+    historyApiFallback: true,
+    compress: true,
+    port: 7070,
+    headers: {
+      "X-Frame-Options": "Deny",
+    },
+  },
+
   plugins: [
     ESLintPlugin,
     new CleanWebpackPlugin(),

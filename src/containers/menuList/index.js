@@ -4,6 +4,7 @@ import NavGroup from './navGroup';
 import menuItem from './menuItems';
 
 const MenuList = () => {
+    console.log('menuItem.items ', menuItem.items);
     const navItems = menuItem.items.map((item) => {
         switch (item.type) {
             case 'group':

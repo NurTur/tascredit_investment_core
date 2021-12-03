@@ -23,6 +23,8 @@ const NavGroup = ({ item }) => {
         }
     });
 
+    console.log('NavGroup ', item, ' ', items);
+
     return (
         <>
             <List

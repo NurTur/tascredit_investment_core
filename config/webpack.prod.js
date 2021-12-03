@@ -3,6 +3,7 @@ const loader = require("./addons/loaders");
 const Dotenv = require("dotenv-webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const apiUrl = require("./apiUrl.js");
 
 module.exports = {
   mode: "production",
