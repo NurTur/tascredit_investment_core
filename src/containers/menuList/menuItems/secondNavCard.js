@@ -26,21 +26,21 @@ const secondNavCard = {
 
             children: [
                 {
-                    id: 'loanAgreements',
+                    id: 'loan-agreements',
                     title: 'Договора займа (P2P)',
                     type: 'item',
                     url: '/contracts/loan-agreements',
                     target: false
                 },
                 {
-                    id: 'bondIssue',
+                    id: 'bond-issue',
                     title: 'Эмиссии облигаций',
                     type: 'item',
                     url: '/contracts/bond-issue',
                     target: false
                 },
                 {
-                    id: 'bondAgreements',
+                    id: 'bond-agreements',
                     title: 'Договора по облигациям',
                     type: 'item',
                     url: '/contracts/bond-agreements',

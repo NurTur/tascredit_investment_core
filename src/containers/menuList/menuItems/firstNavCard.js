@@ -7,7 +7,7 @@ const firstNavCard = {
     type: 'group',
     children: [
         {
-            id: 'clients',
+            id: 'default',
             title: 'Клиенты',
             type: 'item',
             url: '/dashboard/default',

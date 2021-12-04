@@ -7,15 +7,9 @@ const apiUrl = require("./apiUrl.js");
 module.exports = {
   mode: "development",
 
-  module: {
-    rules: [
-      loader.StyleLoader
-    ],
-  },
-
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `[name].[contenthash].css`,
+      filename: `[name].css`,
     }),
     new Dotenv({
       path: path.resolve(__dirname, "./addons/.env.development"),
@@ -23,8 +17,9 @@ module.exports = {
   ],
 
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    filename: "[name].[contenthash].js",
+    publicPath: "/",
+    path: path.resolve(__dirname, "../dist/"),
+    filename: "[name].js",
   },
 
   externals: {

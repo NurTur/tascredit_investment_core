@@ -18,20 +18,16 @@ const CSSLoader = {
 };
 
 const FileLoader = {
-  test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|otf|ico|webmanifest)$/i,
+  test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|otf|ico|webmanifest|svg)$/i,
   use: [
     {
       loader: "file-loader",
       options: {
-        name: "dirname/[contenthash].[ext]",
+        publicPath:'/',
+        name: "[name].[ext]",
       },
     },
   ],
-};
-
-const SVGLoader = {
-  test: /\.svg$/,
-  loader: "svg-inline-loader",
 };
 
 const StyleLoader = {
@@ -64,7 +60,6 @@ const StyleLoader = {
 
 module.exports = {
   JSLoader: JSLoader,
-  SVGLoader: SVGLoader,
   CSSLoader: CSSLoader,
   SCSSLoader: SCSSLoader,
   FileLoader: FileLoader,

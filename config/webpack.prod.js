@@ -8,10 +8,6 @@ const apiUrl = require("./apiUrl.js");
 module.exports = {
   mode: "production",
 
-  module: {
-    rules: [loader.StyleLoader],
-  },
-
   optimization: {
     runtimeChunk: "single",
     splitChunks: {
@@ -19,14 +15,14 @@ module.exports = {
       maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
-        vendor: {
+         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
             const packageName = module.context.match(
               /[\\/]node_modules[\\/](.*?)([\\/]|$)/
             )[1];
 
-            return `yarn.${packageName.replace("@", "")}`;
+            return `npm.${packageName.replace("@", "")}`;
           },
         },
       },
@@ -41,7 +37,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `[name].[contenthash].css`,
+      filename: `[name].[contenthash:8].css`,
     }),
     new Dotenv({
       path: path.resolve(__dirname, "./addons/.env.production"),
@@ -55,8 +51,9 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    filename: "[name].[contenthash].js",
+    publicPath: "/",
+    path: path.resolve(__dirname, "../dist/"),
+    filename: "[name].[contenthash:8].js",
   },
 
   devtool: "source-map",
