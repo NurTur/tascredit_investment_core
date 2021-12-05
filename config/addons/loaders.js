@@ -8,13 +8,8 @@ const JSLoader = {
 };
 
 const SCSSLoader = {
-  test: /\.(scss)$/,
+  test: /\.(scss|css)$/,
   use: ["style-loader", "css-loader", "sass-loader"],
-};
-
-const CSSLoader = {
-  test: /\.css$/,
-  use: ["style-loader", "css-loader"],
 };
 
 const FileLoader = {
@@ -60,7 +55,6 @@ const StyleLoader = {
 
 module.exports = {
   JSLoader: JSLoader,
-  CSSLoader: CSSLoader,
   SCSSLoader: SCSSLoader,
   FileLoader: FileLoader,
   StyleLoader: StyleLoader,

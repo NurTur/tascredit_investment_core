@@ -4,6 +4,32 @@
 // third-party
 @import '~react-perfect-scrollbar/dist/css/styles.css';
 
+*,
+*::before,
+*::after {
+  box-shadow: none;
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nurbolat {
+    font-weight: normal;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 2.5rem;
+    font-weight: normal;
+    padding: 1.75rem;
+    width: calc(50rem - (2 * 1.75rem));  
+}
 // ==============================|| LIGHT BOX ||============================== //
 .fullscreen .react-images__blanket {
     z-index: 1200;

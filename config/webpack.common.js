@@ -26,9 +26,9 @@ module.exports = {
   module: {
     rules: [
       loaders.JSLoader,
-      loaders.CSSLoader,
       loaders.FileLoader,
-      loaders.SCSSLoader,
+      //loaders.SCSSLoader,
+      loaders.StyleLoader
     ],
   },
   
