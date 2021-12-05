@@ -1,8 +1,8 @@
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router';
 import { MainLayout } from '@/containers';
+import { Login } from '@/pages';
 import { Loadable } from '@/components';
-
 
 const DefaultMain = Loadable(lazy(() => import(/* @/views/main */ '@/views/main')));
 
@@ -14,10 +14,11 @@ const MainRoutes = () => (
     <Routes>
         <Route path="/" element={<MainLayout />}>
             <Route index element={<DefaultMain />} />
-            <Route path='dashboard/default' element={<DefaultMain1 />} />
-            <Route path='contracts' element={<DefaultMain2 />}/>    
-            <Route path='contracts/loan-agreements' element={<DefaultMain1 />}/>
+            <Route path="dashboard/default" element={<DefaultMain1 />} />
+            <Route path="contracts" element={<DefaultMain2 />} />
+            <Route path="contracts/loan-agreements" element={<DefaultMain1 />} />
         </Route>
+        <Route path="/login" element={<Login />} />
     </Routes>
 );
 

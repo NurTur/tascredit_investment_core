@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 import reducer from './reducer';
 
 // ==============================|| REDUX - MAIN STORE ||============================== //

@@ -8,8 +8,7 @@ import { store } from './store';
 import App from './App';
 import './assets/scss/style.scss';
 
-
-let persistor = persistStore(store);
+const persistor = persistStore(store);
 
 const Element = (
     <Provider store={store}>

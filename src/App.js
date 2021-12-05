@@ -9,7 +9,7 @@ import { NavigationScroll } from '@/containers';
 const App = () => {
     const customization = useSelector((state) => state.customization);
 
-    console.log("ffffffffff", customization);
+    console.log('ffffffffff', customization);
 
     return (
         <StyledEngineProvider injectFirst>
